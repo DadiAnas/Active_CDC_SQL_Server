@@ -2,6 +2,54 @@
 
 This guide provides steps to activate Change Data Capture (CDC) on SQL Server, Oracle, and PostgreSQL.
 
+## Prerequisites
+Activating Change Data Capture (CDC) or similar features in databases often requires certain prerequisites to be met. Here are the general prerequisites for SQL Server, Oracle, and PostgreSQL:
+
+### SQL Server:
+
+1. **Edition**: CDC is available only in the Enterprise, Developer, and Evaluation editions of SQL Server.
+
+2. **Permissions**: The account used to enable CDC must have the `db_owner` role on the database.
+
+3. **SQL Server Agent**: The SQL Server Agent service must be running, as it's used to support the capture mechanism of CDC.
+
+4. **Backup**: It's advisable to have a recent backup of your database before enabling CDC.
+
+### Oracle:
+
+1. **Supplemental Logging**: Before enabling CDC, ensure that supplemental logging is enabled at the database level.
+
+2. **Privileges**: The user account should have the necessary privileges to execute the `DBMS_CDC_PUBLISH` and `DBMS_CDC_SUBSCRIBE` packages.
+
+3. **Table Types**: Some types of tables, like temporary tables, might not support CDC.
+
+4. **Archiving**: The database should be in ARCHIVELOG mode.
+
+5. **Space**: Ensure there's sufficient space in the redo log and undo tablespaces, as CDC can increase the amount of redo log generated.
+
+### PostgreSQL:
+
+1. **Version**: Logical replication (used for CDC-like functionality) is available starting from PostgreSQL version 10.
+
+2. **Configuration**: The `postgresql.conf` file must be configured to support logical replication (`wal_level`, `max_replication_slots`, `max_wal_senders`).
+
+3. **Replication Role**: The user account should have the `REPLICATION` role.
+
+4. **Connection**: Ensure that the `pg_hba.conf` file is configured to allow replication connections.
+
+5. **Disk Space**: Ensure there's sufficient disk space, as replication slots can retain WAL segments and increase disk usage.
+
+6. **Backup**: As with any significant change, it's advisable to have a recent backup of your database.
+
+For all databases, it's also essential to:
+
+- **Test in a Non-Production Environment**: Before enabling CDC in a production environment, test the setup in a development or staging environment to understand the implications and ensure smooth activation.
+
+- **Monitor Performance**: Activating CDC can have performance implications. Monitor the system's performance after enabling CDC and adjust configurations as necessary.
+
+- **Review Official Documentation**: Always refer to the official documentation of the respective database system for detailed prerequisites and considerations specific to your database version and setup.
+
+# Activation 
 ## SQL Server
 
 ### 1. Activate CDC at the Database Level:
