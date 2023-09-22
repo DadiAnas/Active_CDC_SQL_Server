@@ -68,6 +68,7 @@ Activating Change Data Capture (CDC) or similar features in databases often requ
 ### MySQL Prerequisites:
 MySQL does not have a built-in feature called "Change Data Capture" (CDC) like SQL Server or Oracle. However, MySQL supports binary logging, which can be used to capture changes made to the databases and tables. 
 
+---
 For all databases, it's also essential to:
 
 - **Test in a Non-Production Environment**: Before enabling CDC in a production environment, test the setup in a development or staging environment to understand the implications and ensure smooth activation.
