@@ -1,3 +1,26 @@
+# Table of Contents
+
+- [Activating Change Data Capture (CDC)](#activating-change-data-capture-cdc)
+  - [Prerequisites](#Prerequisites)
+    - [SQL Server](#sql-server)
+    - [Oracle](#oracle)
+    - [PostgreSQL](#PostgreSQL)
+  - [SQL Server](#sql-server)
+    - [Activate CDC at the Database Level](#activate-cdc-at-the-database-level)
+    - [Activate CDC for a Specific Table](#activate-cdc-for-a-specific-table)
+  - [Oracle](#oracle)
+    - [Grant Necessary Privileges](#grant-necessary-privileges)
+    - [Begin the CDC Configuration](#begin-the-cdc-configuration)
+  - [PostgreSQL](#postgresql)
+    - [Modify the Configuration File](#modify-the-configuration-file)
+    - [Create an Output Plugin](#create-an-output-plugin)
+- [Best Practices & Additional Notes](#best-practices--additional-notes)
+- [Advanced Considerations & Troubleshooting](#advanced-considerations--troubleshooting)
+- [Maintenance & Cleanup](#maintenance--cleanup)
+- [Feedback & Community](#feedback--community)
+- [Conclusion](#conclusion)
+
+
 # Activating Change Data Capture (CDC)
 
 This guide provides steps to activate Change Data Capture (CDC) on SQL Server, Oracle, and PostgreSQL.
