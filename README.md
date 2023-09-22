@@ -5,6 +5,7 @@
     - [SQL Server Prerequisites](#sql-server-Prerequisites)
     - [Oracle Prerequisites](#oracle-Prerequisites)
     - [PostgreSQL Prerequisites](#PostgreSQL-Prerequisites)
+    - [MySQL Prerequisites](#MySQL-Prerequisites)
   - [SQL Server](#sql-server)
     - [Activate CDC at the Database Level](#activate-cdc-at-the-database-level)
     - [Activate CDC for a Specific Table](#activate-cdc-for-a-specific-table)
@@ -23,12 +24,12 @@
 
 # Activating Change Data Capture (CDC)
 
-This guide provides steps to activate Change Data Capture (CDC) on SQL Server, Oracle, and PostgreSQL.
+This guide provides steps to activate Change Data Capture (CDC) on SQL Server, Oracle, PostgreSQL, and MySQL.
 
 ## Prerequisites
 Activating Change Data Capture (CDC) or similar features in databases often requires certain prerequisites to be met. Here are the general prerequisites for SQL Server, Oracle, and PostgreSQL:
 
-### SQL Server:
+### SQL Server Prerequisites:
 
 1. **Edition**: CDC is available only in the Enterprise, Developer, and Evaluation editions of SQL Server.
 
@@ -38,7 +39,7 @@ Activating Change Data Capture (CDC) or similar features in databases often requ
 
 4. **Backup**: It's advisable to have a recent backup of your database before enabling CDC.
 
-### Oracle:
+### Oracle Prerequisites:
 
 1. **Supplemental Logging**: Before enabling CDC, ensure that supplemental logging is enabled at the database level.
 
@@ -50,7 +51,7 @@ Activating Change Data Capture (CDC) or similar features in databases often requ
 
 5. **Space**: Ensure there's sufficient space in the redo log and undo tablespaces, as CDC can increase the amount of redo log generated.
 
-### PostgreSQL:
+### PostgreSQL Prerequisites:
 
 1. **Version**: Logical replication (used for CDC-like functionality) is available starting from PostgreSQL version 10.
 
@@ -63,6 +64,9 @@ Activating Change Data Capture (CDC) or similar features in databases often requ
 5. **Disk Space**: Ensure there's sufficient disk space, as replication slots can retain WAL segments and increase disk usage.
 
 6. **Backup**: As with any significant change, it's advisable to have a recent backup of your database.
+
+### MySQL Prerequisites:
+MySQL does not have a built-in feature called "Change Data Capture" (CDC) like SQL Server or Oracle. However, MySQL supports binary logging, which can be used to capture changes made to the databases and tables. 
 
 For all databases, it's also essential to:
 
