@@ -181,6 +181,7 @@ For further reading and detailed documentation, refer to the official documentat
 
 - [SQL Server CDC Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
 - [Oracle CDC Documentation](https://docs.oracle.com/en/database/)
+- [Oracle CDC DBMS_CDC_PUBLISH](https://docs.oracle.com/cd/B13789_01/appdev.101/b10802/d_logpub.htm) [Latest Documentation](https://support.oracle.com/knowledge/Oracle%20Database%20Products/1203935_1.html)
 - [PostgreSQL Logical Replication Documentation](https://www.postgresql.org/docs/current/logical-replication.html)
 - [MySQL 5.5 Binary Logging](https://dev.mysql.com/doc/refman/5.5/en/binary-log.html)
 - [MySQL 5.6 Binary Logging](https://dev.mysql.com/doc/refman/5.6/en/binary-log.html)
