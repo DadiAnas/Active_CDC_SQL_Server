@@ -2,9 +2,9 @@
 
 - [Activating Change Data Capture (CDC)](#activating-change-data-capture-cdc)
   - [Prerequisites](#Prerequisites)
-    - [SQL Server](#sql-server)
-    - [Oracle](#oracle)
-    - [PostgreSQL](#PostgreSQL)
+    - [SQL Server Prerequisites](#sql-server-Prerequisites)
+    - [Oracle Prerequisites](#oracle-Prerequisites)
+    - [PostgreSQL Prerequisites](#PostgreSQL-Prerequisites)
   - [SQL Server](#sql-server)
     - [Activate CDC at the Database Level](#activate-cdc-at-the-database-level)
     - [Activate CDC for a Specific Table](#activate-cdc-for-a-specific-table)
